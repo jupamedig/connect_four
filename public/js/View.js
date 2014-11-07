@@ -9,9 +9,12 @@ View.prototype.renderPiece = function(rowNum, colClicked, currentColor) {
   } else if (currentColor === "R") {
     pieceColor = "red";
   }
-  // $piece = $('<p class="' + this.currentColor + '"></p>');
-  // $('#col' + colClicked + ' #row0').innerHTML($piece);
-  $("#col" + colClicked + " #row" + rowNum).addClass(pieceColor);
+
+  $piece = $('<p class="' + pieceColor + '"></p>');
+  console.log($piece);
+  console.log(colClicked);
+  $('#col' + colClicked + ' #row0').innerHTML($piece);
+  // $("#col" + colClicked + " #row" + rowNum).addClass(pieceColor);  // ?? adds background color style to div
 }
 
 View.prototype.renderWinner = function(winnerColor) {
