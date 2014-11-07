@@ -89,7 +89,7 @@ Board.prototype.checkDiagonals = function() {
 
 
 Board.prototype.hasWinner = function() {
-  if (this.checkColumns()  || this.checkRows() ) { // || this.checkDiagonals();
+  if (this.checkColumns() || this.checkRows() || this.checkDiagonals()) {
     return true;
   } else {
     return false;
